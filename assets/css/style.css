@@ -1,0 +1,41 @@
+.mera-form {
+  width: 50%;
+  margin: auto;
+  padding: 20px 20px 20px 20px;
+}
+@media(max-width: 900px) {
+  .mera-form {
+    width: 100%;
+    margin: auto;
+    padding: 20px 20px 20px 20px;
+  }
+}
+
+.mera-txt {
+    color: #3f51b5 ;
+}
+
+.mera-search {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.meraback {
+    background: url('../img/carousel/3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.form3 {
+  color: aliceblue;
+}
+
+#home::before,
+#login::before,
+#about::before {
+  display: block;
+  content: " ";
+  margin-top: -65px;
+  height: 65px;
+  visibility: hidden;
+}

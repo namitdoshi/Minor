@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Book My Doctor | Doctor Signup</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.5/css/mdb.min.css" rel="stylesheet">
+  <!-- Meri CSS -->
+  <link href="../../assets/css/style.css" rel="stylesheet">
+</head>
+
+  <!--Navbar -->
+  <nav class="mb-1 navbar navbar-expand-lg navbar-dark mdb-color darken-4">
+    <a class="navbar-brand" href="#">Book My Doctor <i class="fas fa-user-md"></i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+      aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+      <ul class="navbar-nav mr-auto smooth-scroll list-unstyled">
+        <li class="nav-item active">
+          <a class="nav-link" href="../../index.php#home">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="../../index.php#about">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">Signup
+          </a>
+          <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+            <a class="dropdown-item" href="../patient/patientSignup.html">Patient</a>
+            <a class="dropdown-item" href="#">Doctor </a>
+          </div>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto nav-flex-icons">
+        <li class="nav-item">
+          <a class="nav-link waves-effect waves-light">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-effect waves-light">
+            <i class="fab fa-google-plus-g"></i>
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <i class="fas fa-user"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+            <a class="dropdown-item" href="../../index.php#login">Login</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!--/.Navbar -->
+
+  <!-- Material form register -->
+  <div class="container mera-form">
+    <div class="card">
+      <h5 class="card-header white-text text-center py-4 indigo">
+        <strong>Sign up</strong>
+      </h5>
+      <!--Card content-->
+      <div class="card-body px-lg-5 pt-0">
+        <!-- Form -->
+        <form class="text-center" style="color: #757575;" action="../../includes/signup.php" method="POST" enctype="multipart/form-data">
+          <div class="form-row">
+            <div class="col">
+              <!-- Name -->
+              <div class="md-form">
+                <input type="text" id="name" class="form-control" name="name" required>
+                <label for="name">Name</label>
+              </div>
+            </div>
+            <div class="col">
+              <!-- Email -->
+              <div class="md-form">
+                <input type="email" id="email" class="form-control" name="email" required>
+                <label for="email">Email</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+              <div class="col">
+                <!-- Phone Number -->
+                <div class="md-form">
+                  <input type="text" id="phone" class="form-control" maxlength="10" name="phone" required>
+                  <label for="phone">Phone Number</label>
+                </div>
+              </div>
+              <div class="col">
+                <!-- Aadhar -->
+                <div class="md-form">
+                  <input type="text" id="aadhar" class="form-control" maxlength="12" name="adrid" required>
+                  <label for="aadhar">Aadhar Card Number</label>
+                </div>
+              </div>
+            </div>
+          <!-- Password -->
+          <div class="form-row">
+            <div class="col">
+              <div class="md-form">
+                <input type="password" id="password" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock" name="password" required>
+                <label for="password">Password</label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="md-form">
+                <input type="text" id="docid" class="form-control" name="docid" required>
+                <label for="docid">Doctor Registeration Number</label>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Picture -->
+          <!-- <div class="md-form">
+            <div class="file-field">
+             <div class="btn btn-primary btn-sm float">
+                <span>Upload your picture &emsp;</span>
+                <input type="file" name="newpic">
+             </div>
+            </div>
+          </div> -->
+
+          <!-- Category -->
+          <div class="md-form">
+            <div class="container">
+              <select class="browser-default custom-select" name="doccat" required>
+                <option selected>Medical Specialization</option>
+                <option value="Dentist">Dentist</option>
+                <option value="Cardiologist">Cardiologist</option>
+                <option value="General Physician">General Physician</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Sign up button -->
+          <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit" name="btn_doc">Sign up</button>
+    
+          <hr>
+    
+          <!-- Terms of service -->
+          <p>By clicking
+            <em>Sign up</em> you agree to our
+            <a href="" target="_blank">terms of service</a>
+          </p>
+        </form>
+          <!-- Form -->
+    
+      </div>
+  
+    </div>
+  </div>
+  <!-- Material form register -->
+
+  <!-- Footer -->
+  <footer class="page-footer font-small unique-color-dark pt-4 fixed-bottom">
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2019 Copyright - All rights reserved
+      <a href="#"></a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- /Footer -->
+
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.5/js/mdb.min.js"></script>  
+</body>
+
+</html>
