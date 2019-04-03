@@ -53,7 +53,7 @@ if(mysqli_num_rows($r)>0){
 					setcookie('dpp', $_POST['useremail'], $expire);
         }
 
-		header("location:./src/patientSignup.html");
+		header("location:./src/patient/patientSignup.html");
 	}
 	else{
 		echo "<script>";
@@ -146,16 +146,6 @@ else{
         </li>
       </ul>
       <ul class="navbar-nav ml-auto nav-flex-icons">
-        <li class="nav-item">
-          <a class="nav-link waves-effect waves-light">
-            <i class="fab fa-twitter"></i>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link waves-effect waves-light">
-            <i class="fab fa-google-plus-g"></i>
-          </a>
-        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false">
@@ -193,8 +183,7 @@ else{
                 </p>
 
                 <p class="mb-4 d-none d-md-block">
-                  <strong>The most comprehensive tutorial for the Bootstrap 4. Loved by over 500 000 users. Video and written versions
-                    available. Create your own, stunning website.</strong>
+                  <strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid placeat sunt nesciunt</strong>
                 </p>
 
                 <a href="./src/patient/patientSignup.html" class="btn btn-indigo btn-lg">Patient Signup
@@ -400,7 +389,7 @@ else{
           <h5 class="mb-1">Register for free</h5>
         </li>
         <li class="list-inline-item">
-          <a href="./src/signup.html" class="btn btn-outline-white btn-rounded">Sign up!</a>
+          <a href="./src/patient/patientSignup.html" class="btn btn-outline-white btn-rounded">Sign up!</a>
         </li>
       </ul>
       <!-- Call to action -->
