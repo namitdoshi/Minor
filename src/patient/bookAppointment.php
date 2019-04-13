@@ -171,6 +171,9 @@ if(!isset($_SESSION['useremail'])){
   <!-- /Footer -->
 
   <script src="../../assets/js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="../../assets/js/jquery.datetimepicker.full.js"></script>
   <!-- Materialize JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <!-- JQuery -->
@@ -227,21 +230,24 @@ if(!isset($_SESSION['useremail'])){
     }
 
 
-      $( "#datepicker" ).datepicker({
-      dateFormat: "yy-m-dd",
-      minDate: 0,
-      maxDate: 4,
-    });
+    $( function() {
+    $( "#datepicker" ).datepicker({
+		dateFormat: "yy-m-dd",
+		minDate: 0,
+		maxDate: 4,
+	});
+  } );
 
 
-    $('#datetimepicker').datetimepicker({
-      datepicker:false,
-      format:'H:i',
-        formatTime: 'h:i A',
-      allowTimes:['09:00','09:15','9:30','9:45','10:00','10:15','10:30','10:45','11:00','11:15','11:30','11:45','12:00','12:15','12:30','12:45',
-            '14:00','14:15','14:30','14:45','15:00','15:15','15:30','15:45','16:00','16:15','16:30','16:45','17:00','17:15','17:30','17:45','18:00'],
-      step:5
-    });
+
+  $('#datetimepicker').datetimepicker({
+	datepicker:false,
+	format:'H:i',
+    formatTime: 'h:i A',
+	allowTimes:['09:00','09:15','9:30','9:45','10:00','10:15','10:30','10:45','11:00','11:15','11:30','11:45','12:00','12:15','12:30','12:45',
+				'14:00','14:15','14:30','14:45','15:00','15:15','15:30','15:45','16:00','16:15','16:30','16:45','17:00','17:15','17:30','17:45','18:00'],
+	step:5
+});
   </script>
 </body>
 </html>
