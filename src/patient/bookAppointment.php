@@ -69,7 +69,7 @@ if(!isset($_SESSION['useremail'])){
             <i class="fas fa-user"></i>
           </a>
           <div class="dropdown-menu dropdown-menu-right dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-            <a class="dropdown-item" href="">Logout</a>
+            <a class="dropdown-item" href="../logout.php">Logout</a>
           </div>
         </li>
       </ul>
