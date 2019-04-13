@@ -27,7 +27,7 @@ if(mysqli_num_rows($r)>0){
 					$expire = time()+86400;
 					setcookie('dpp', $_POST['useremail'], $expire);
 				}
-		header("location:doctor.php");
+		header("location:./src/doctor/doctor.php");
 	}
 	else
 	{
@@ -53,7 +53,7 @@ if(mysqli_num_rows($r)>0){
 					setcookie('dpp', $_POST['useremail'], $expire);
         }
 
-		header("location:./src/patient/patientSignup.html");
+		header("location:./src/patient/patient.php");
 	}
 	else{
 		echo "<script>";
@@ -215,13 +215,13 @@ else{
 
                       <div class="md-form">
                         <i class="fas fa-envelope prefix white-text"></i>
-                        <input type="text" id="email" name="useremail" class="form-control" required>
-                        <label for="form3">Your email</label>
+                        <input type="text" id="email" name="useremail" class="form-control" style="color: #fff;" required>
+                        <label for="email" style="color: #fff;">Your email</label>
                       </div>
                       <div class="md-form">
                         <i class="fas fa-lock prefix white-text"></i>
-                        <input type="password" id="form2" class="form-control" name="userpass" required>
-                        <label for="form2">Your password</label>
+                        <input type="password" id="pass" class="form-control" name="userpass" style="color: #fff;" required>
+                        <label for="pass" style="color: #fff;">Your password</label>
                       </div>
                       <div class="text-center">
                         <button class="btn btn-indigo" name="loginButton">Login <i class="fas fa-arrow-circle-right"></i></button>
