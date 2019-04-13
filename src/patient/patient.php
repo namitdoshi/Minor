@@ -110,8 +110,38 @@ if(!isset($_SESSION['useremail'])){
         </div>
       </div>
       <!-- /Card 1-->
-        
       <!-- Card 2 -->
+      <div class="col-sm-4" style="padding-bottom:20px;">
+        <div class="card">
+          <!-- Card content -->
+          <div class="card-body">
+            <!-- Title -->
+            <h4 class="card-title"><a>Today's Appointment</a></h4>
+            <!-- Text -->
+            <p class="card-text">Some text to be inserted by prem</p>
+            <!-- Button -->
+            <a href="./todaysAppointment.php" class="btn btn-indigo"><i class="fas fa-calendar-day"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- /Card 2-->
+      <!-- Card 3 -->
+      <div class="col-sm-4" style="padding-bottom:20px;">
+        <div class="card">
+          <!-- Card content -->
+          <div class="card-body">
+            <!-- Title -->
+            <h4 class="card-title"><a>Upcoming Appointments</a></h4>
+            <!-- Text -->
+            <p class="card-text">Some text to be inserted by prem</p>
+            <!-- Button -->
+            <a href="./upcomingAppointments.php" class="btn btn-indigo"><i class="fas fa-fast-forward"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- /Card 3-->
+        
+      <!-- Card 4 -->
       <div class="col-sm-4" style="padding-bottom:20px;">  
         <div class="card">
           <!-- Card content -->
@@ -125,23 +155,22 @@ if(!isset($_SESSION['useremail'])){
           </div>
         </div>
       </div>
-      <!-- /Card 2-->
-
-      <!-- Card 3 -->
+      <!-- /Card 4-->
+      <!-- Card 5 -->
       <div class="col-sm-4" style="padding-bottom:20px;">  
         <div class="card">
           <!-- Card content -->
           <div class="card-body">
             <!-- Title -->
-            <h4 class="card-title"><a>Cancel Appointment</a></h4>
+            <h4 class="card-title"><a>Missed Appointments</a></h4>
             <!-- Text -->
             <p class="card-text">Some text to be inserted by prem</p>
             <!-- Button -->
-            <a href="./cancel.php" class="btn btn-indigo"><i class="fas fa-times"></i></a>
+            <a href="./missedAppointments.php" class="btn btn-indigo"><i class="fas fa-history"></i></a>
           </div>
         </div>
       </div>
-      <!-- /Card 3 -->
+      <!-- /Card 5-->
     </div>
   </div>
   <div class="invisible">
