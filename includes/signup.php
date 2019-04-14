@@ -116,8 +116,8 @@ else{
 	
 	// if(($type == "application/pdf")){
 	// 	$location2 = "./verify/$docid/docs/";
-	// 	$status = "fail";
-	// 	$type = "doc";
+		$status = "fail";
+		$type = "doc";
 		
 		$q = "insert into doctor values('', '$name', '$email', '$pass', '$age', '$phone', '$status', '$type', '$address', '$gender', '$docid', '$adrid', '$cat','$location2','', '$question', '$answer')";
 		if($t = mysqli_query($con, $q)){
