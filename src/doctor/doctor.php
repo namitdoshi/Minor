@@ -1,9 +1,14 @@
 <?php
 session_start();
 if(isset($_SESSION['useremail'])||isset($_COOKIE['dpp'])) {
-	// echo "string";
+  // echo "string";
+}
 if(!isset($_SESSION['useremail'])){
-	echo "<div align='center' style='font-family : calibri; color:white; background:#D20D0D; padding:15px;'>Access Denied ! </div>";
+	echo "<div align='center' style='font-family : calibri; color:white; background:pink; padding:15px;'>Access Denied ! </div>";
+  echo '<script type="text/javascript">'; 
+  echo 'alert("You must login to continue.");'; 
+  echo 'window.location.href = "../../index.php";';
+  echo '</script>';	
 } 
 else {
 	// echo "string";
@@ -33,8 +38,9 @@ while($row = mysqli_fetch_assoc($rec)){
 if(@$type == "doc") {
 	// echo "test 4";
 	if($sts == "fail") {
+    include "../linker.php";
 		echo "<div align='center' style='font-family : calibri; color:white; background:#D20D0D; padding:15px;'>
-		Your Account is under review it may take up to 3 or 4 days to verify !</div>";
+		Your Account is under review it may take up to 3 to 4 days to verify !</div>";
   }
   elseif($sts == "success") {
 		// echo "<br>";
@@ -235,5 +241,5 @@ if(@$type == "doc") {
   else {echo "some error occured, please check your internet connection";}
 }
 }
-}
+
 ?>
