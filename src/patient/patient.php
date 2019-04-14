@@ -2,7 +2,11 @@
 // echo 'namit';
 session_start();
 if(!isset($_SESSION['useremail'])){
-	echo "<div align='center' style='font-family : calibri; color:white; background:pink; padding:15px;'>Access Denied ! </div>";
+  echo "<div align='center' style='font-family : calibri; color:white; background:pink; padding:15px;'>Access Denied ! </div>";
+  echo '<script type="text/javascript">'; 
+  echo 'alert("You must login to continue.");'; 
+  echo 'window.location.href = "../../index.php";';
+  echo '</script>';	
 } else{
     if(isset($_SESSION['useremail'])||isset($_COOKIE['dpp'])) {
       $email = $_SESSION['useremail'];
@@ -94,7 +98,7 @@ if(!isset($_SESSION['useremail'])){
     </section>
     <!--Section: Jumbotron-->
 
-    <div id="doc-main" class="row" style="padding-top: 20px;">
+    <div id="pat-main" class="row" style="padding-top: 20px;">
       <!-- Card 1 -->
       <div class="col-sm-4" style="padding-bottom:20px;">
         <div class="card">
