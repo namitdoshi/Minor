@@ -134,7 +134,6 @@ if(!isset($_SESSION['useremail'])){
                 <p>Doctor's Name: Dr. <?php echo $docname;?></p>
                 <p>Patient's Name: <?php echo $newname;?></p>  
               </div> 
-              <a class="btn btn-indigo" href="./cancel.php?aid=<?php echo $row['id'];?>"  onclick="return confirm('Are you sure want to cancel?')"><i class="far fa-trash-alt"></i> Cancel Appointment</a>  
             </div>
             </div>
           </div>
