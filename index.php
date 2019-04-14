@@ -75,7 +75,7 @@ elseif(mysqli_num_rows($ad)>0){
 					$expire = time()+86400;
 					setcookie('dpp', $_POST['useremail'], $expire);
 				}
-			header("location:adminpanel.php");
+			header("location:./src/admin/adminpanel.php");
 			
 		}else{
 			echo "<script>";
