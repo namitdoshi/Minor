@@ -120,6 +120,21 @@ if(!isset($_SESSION['useremail'])){
           <!-- Card content -->
           <div class="card-body">
             <!-- Title -->
+            <h4 class="card-title"><a>Make Payment</a></h4>
+            <!-- Text -->
+            <p class="card-text">Some text to be inserted by prem</p>
+            <!-- Button -->
+            <a href="./makePayment.php" class="btn btn-indigo"><i class="fab fa-amazon-pay"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- /Card 2-->
+      <!-- Card 3 -->
+      <div class="col-sm-4" style="padding-bottom:20px;">
+        <div class="card">
+          <!-- Card content -->
+          <div class="card-body">
+            <!-- Title -->
             <h4 class="card-title"><a>Today's Appointment</a></h4>
             <!-- Text -->
             <p class="card-text">Some text to be inserted by prem</p>
@@ -128,8 +143,8 @@ if(!isset($_SESSION['useremail'])){
           </div>
         </div>
       </div>
-      <!-- /Card 2-->
-      <!-- Card 3 -->
+      <!-- /Card 3-->
+      <!-- Card 4 -->
       <div class="col-sm-4" style="padding-bottom:20px;">
         <div class="card">
           <!-- Card content -->
@@ -143,9 +158,9 @@ if(!isset($_SESSION['useremail'])){
           </div>
         </div>
       </div>
-      <!-- /Card 3-->
+      <!-- /Card 4-->
         
-      <!-- Card 4 -->
+      <!-- Card 5 -->
       <div class="col-sm-4" style="padding-bottom:20px;">  
         <div class="card">
           <!-- Card content -->
@@ -159,8 +174,8 @@ if(!isset($_SESSION['useremail'])){
           </div>
         </div>
       </div>
-      <!-- /Card 4-->
-      <!-- Card 5 -->
+      <!-- /Card 5-->
+      <!-- Card 6 -->
       <div class="col-sm-4" style="padding-bottom:20px;">  
         <div class="card">
           <!-- Card content -->
@@ -174,7 +189,7 @@ if(!isset($_SESSION['useremail'])){
           </div>
         </div>
       </div>
-      <!-- /Card 5-->
+      <!-- /Card 6-->
     </div>
   </div>
   <div class="invisible">
