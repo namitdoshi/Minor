@@ -183,7 +183,7 @@ else{
                 </p>
 
                 <p class="mb-4 d-none d-md-block">
-                  <strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid placeat sunt nesciunt</strong>
+                  <strong>We provide a platform to Book Doctor appointment hassle free & skip long queues.</strong>
                 </p>
 
                 <a href="./src/patient/patientSignup.html" class="btn btn-indigo btn-lg">Patient Signup
@@ -269,12 +269,12 @@ else{
     <!--Section: Main features & Quick Start-->
     <section id="about">
 
-      <h3 class="h3 text-center mb-5">About BMD</h3>
+      <h3 class="h3 text-center mb-5">About BMD <i class="fas fa-user-md"></i></h3>
 
       <!--Grid row-->
       <div class="row wow fadeIn">
 
-        <!--Grid column-->
+        <!--Grid column 1-->
         <div class="col-lg-6 col-md-12 px-4">
 
           <!--First row-->
@@ -283,8 +283,8 @@ else{
               <i class="fas fa-angle-right fa-2x cyan-text"></i>
             </div>
             <div class="col-10">
-              <h5 class="feature-title">Bootstrap 4</h5>
-              <p class="grey-text">Thanks to MDB you can take advantage of all feature of newest Bootstrap 4.</p>
+              <h5 class="feature-title">Online appointment</h5>
+              <p class="grey-text">Thanks to BMD you can now book doctor appointments remotely allowing you to skip long queues.</p>
             </div>
           </div>
           <!--/First row-->
@@ -297,10 +297,9 @@ else{
               <i class="fas fa-angle-right fa-2x cyan-text"></i>
             </div>
             <div class="col-10">
-              <h5 class="feature-title">Detailed documentation</h5>
-              <p class="grey-text">We give you detailed user-friendly documentation at your disposal. It will help you to implement your ideas
-                easily.
-              </p>
+            <h5 class="feature-title">Online appointment</h5>
+            <p class="grey-text">Thanks to BMD you can now book doctor appointments remotely allowing you to skip long queues.</p>
+            </p>
             </div>
           </div>
           <!--/Second row-->
@@ -313,30 +312,31 @@ else{
               <i class="fas fa-angle-right fa-2x cyan-text"></i>
             </div>
             <div class="col-10">
-              <h5 class="feature-title">Lots of tutorials</h5>
-              <p class="grey-text">We care about the development of our users. We have prepared numerous tutorials, which allow you to learn
-                how to use MDB as well as other technologies.</p>
+              <h5 class="feature-title">Online appointment</h5>
+              <p class="grey-text">Thanks to BMD you can now book doctor appointments remotely allowing you to skip long queues.</p>
             </div>
           </div>
           <!--/Third row-->
 
         </div>
-        <!--/Grid column-->
+        <!--/Grid column 1-->
 
-        <!--Grid column-->
-        <div class="col-lg-6 col-md-12">
+        <!--Grid column 2-->
+        <div class="col-lg-6 col-md-12 px-4">
+
           <!--First row-->
           <div class="row">
             <div class="col-1 mr-3">
               <i class="fas fa-angle-right fa-2x cyan-text"></i>
             </div>
             <div class="col-10">
-              <h5 class="feature-title">Lots of tutorials</h5>
-              <p class="grey-text">We care about the development of our users. We have prepared numerous tutorials, which allow you to learn
-                how to use MDB as well as other technologies.</p>
+              <h5 class="feature-title">Online appointment</h5>
+              <p class="grey-text">Thanks to BMD you can now book doctor appointments remotely allowing you to skip long queues.</p>
             </div>
           </div>
           <!--/First row-->
+
+          <div style="height:30px"></div>
 
           <!--Second row-->
           <div class="row">
@@ -344,12 +344,14 @@ else{
               <i class="fas fa-angle-right fa-2x cyan-text"></i>
             </div>
             <div class="col-10">
-              <h5 class="feature-title">Lots of tutorials</h5>
-              <p class="grey-text">We care about the development of our users. We have prepared numerous tutorials, which allow you to learn
-                how to use MDB as well as other technologies.</p>
+            <h5 class="feature-title">Online appointment</h5>
+            <p class="grey-text">Thanks to BMD you can now book doctor appointments remotely allowing you to skip long queues.</p>
+            </p>
             </div>
           </div>
           <!--/Second row-->
+
+          <div style="height:30px"></div>
 
           <!--Third row-->
           <div class="row">
@@ -357,15 +359,14 @@ else{
               <i class="fas fa-angle-right fa-2x cyan-text"></i>
             </div>
             <div class="col-10">
-              <h5 class="feature-title">Lots of tutorials</h5>
-              <p class="grey-text">We care about the development of our users. We have prepared numerous tutorials, which allow you to learn
-                how to use MDB as well as other technologies.</p>
+              <h5 class="feature-title">Online appointment</h5>
+              <p class="grey-text">Thanks to BMD you can now book doctor appointments remotely allowing you to skip long queues.</p>
             </div>
           </div>
           <!--/Third row-->
+
         </div>
-      </div>
-        <!--/Grid column-->
+        <!--/Grid column 2-->
 
       </div>
       <!--/Grid row-->
