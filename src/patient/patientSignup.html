@@ -88,7 +88,7 @@
             <div class="col">
               <!-- Phone Number -->
               <div class="md-form">
-                <input type="text" id="phone" class="form-control" maxlength="10" name="p_phone" required>
+                <input type="tel" id="phone" class="form-control" maxlength="10" name="p_phone" required>
                 <label for="phone">Phone Number</label>
               </div>
             </div>
@@ -100,13 +100,24 @@
               </div>
             </div>
           </div>
-          <!-- Password -->
-          <div class="md-form">
-            <input type="password" id="password" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock" name="p_password" required>
-            <label for="password">Password</label>
-            <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
-              At least 8 characters and 1 digit
-            </small>
+          <div class="form-row">
+            <div class="col">
+              <!-- Phone Number -->
+              <div class="md-form">
+                <input type="text" id="age" class="form-control" maxlength="3" name="p_age" required>
+                <label for="age">Age</label>
+              </div>
+            </div>
+            <div class="col">
+              <!-- Password -->
+              <div class="md-form">
+                <input type="password" id="password" class="form-control"  name="p_password" required>
+                <label for="password">Password</label>
+                <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+                  At least 8 characters and 1 digit
+                </small>
+              </div>
+            </div>
           </div>
           <!-- Sign up button -->
           <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit" name="btn_pat">Sign up</button>

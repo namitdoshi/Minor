@@ -84,8 +84,7 @@ if(!isset($_SESSION['useremail'])){
     </nav>
     <?php
 		include('../../includes/conn.php');
-
-		$q1 = "SELECT * FROM appointments where a_date<CURRENT_DATE AND a_time<CURRENT_TIME AND status='pending' ";
+    $q1 = "SELECT * FROM appointments where a_date<CURRENT_DATE AND status='pending' ";
 		$r = mysqli_query($con,$q1);
 		while($row = mysqli_fetch_assoc($r)){
 			$aid = $row['id'];
@@ -98,8 +97,8 @@ if(!isset($_SESSION['useremail'])){
 			$tid = $row['tid'];
 			$rpath = $row['pre_reprt'];
 
-		   $dt = date("d-M-Y", strtotime($ad));
-		   $tt  = date("h:i A", strtotime($apt));
+		  $dt = date("d-M-Y", strtotime($ad));
+      $tt  = date("h:i A", strtotime($apt));
 
 			$q2 = "SELECT name,phone_number,address FROM doctor where did='$docid' ";
 			$r1 = mysqli_query($con,$q2);
@@ -107,7 +106,6 @@ if(!isset($_SESSION['useremail'])){
 				$docname = $rw['name'];
 				$docadd = $rw['address'];
 				$ph = $rw['phone_number'];
-
 
 
 

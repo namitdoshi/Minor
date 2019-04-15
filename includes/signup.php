@@ -161,7 +161,7 @@ if(isset($_POST['btn_pat'])){
 $name = $_POST['pname'];
 $email = $_POST['pemail'];
 $pass = $_POST['p_password'];
-// $age = $_POST['p_age'];
+$age = $_POST['p_age'];
 // $address = $_POST['paddress'];
 // $gender = $_POST['pgender'];
 $phone = $_POST['p_phone'];
@@ -170,7 +170,7 @@ $adrpt = $_POST['adridpt'];
 // $answer = $_POST['answer'];
 
 // Jugaad
-$age = $question = $address = $gender = $answer = $question = $location = 'Null';
+$question = $address = $gender = $answer = $question = $location = 'Null';
 
 include('./conn.php');
 $q = "SELECT * FROM doctor where email ='$email'";
@@ -230,18 +230,18 @@ else{
 		echo 'window.location.href = "../src/patient/patientSignup.html";';
 		echo '</script>';
 	}
-	// elseif($age>120){
-	// 	echo '<script type="text/javascript">'; 
-	// 	echo 'alert("Invalid age");'; 
-	// 	echo 'window.location.href = "../src/patientSignup.html";';
-	// 	echo '</script>';
-	// }elseif($question == "Choose a security question")
-	// {
-	// 	echo '<script type="text/javascript">'; 
-	// 	echo 'alert("Choose a security question !");'; 
-	// 	echo 'window.location.href = "../src/patientSignup.html";';
-	// 	echo '</script>';
-	// }
+	elseif($age>120){
+		echo '<script type="text/javascript">'; 
+		echo 'alert("Invalid age");'; 
+		echo 'window.location.href = "../src/patientSignup.html";';
+		echo '</script>';
+	}elseif($question == "Choose a security question")
+	{
+		echo '<script type="text/javascript">'; 
+		echo 'alert("Choose a security question !");'; 
+		echo 'window.location.href = "../src/patientSignup.html";';
+		echo '</script>';
+	}
 	else{
 	// $location = "./patient/$adrpt/img/";
 	
