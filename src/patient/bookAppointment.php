@@ -43,6 +43,8 @@ if(!isset($_SESSION['useremail'])){
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
   <!-- Material Design Bootstrap -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.5/css/mdb.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/jquery-datetimepicker.css">
+  <link rel="stylesheet" href="../../assets/css/jquery-ui.css">
   <!-- Meri CSS -->
   <link href="../../assets/css/style.css" rel="stylesheet">
 </head>
@@ -109,7 +111,7 @@ if(!isset($_SESSION['useremail'])){
             <!-- input date -->
             <div class="md-form">
               <i class="fas fa-calendar-day prefix grey-text"></i>
-              <input type="text" class="form-control" name="date" id="datepicker" required>
+              <input type="text" class="form-control" name="date" id="datepicker" require>
               <label class="font-weight-light" for="datepicker">Appointment Date</label>
             </div>
             <!-- Time -->
@@ -119,34 +121,22 @@ if(!isset($_SESSION['useremail'])){
                 <label for="datetimepicker">Appointment time</label>
               </div>
             <!-- /Time -->
-            <!-- Doctor type -->
+            <!-- Doctor -->
             <div class="md-form">
                 <div class="container">
                     <select class="browser-default custom-select form-control" name="doccat" onchange="getId(this.value);" id="doc" required>
-                      <option selected>Select Doctor Category</option>
+                      <option selected>Select Doctor</option>
                       <?php
                         include('../../includes/conn.php');
-                        $qu = "SELECT DISTINCT specialist FROM doctor WHERE status='success'";
+                        // $qu = "SELECT DISTINCT specialist FROM doctor WHERE status='success'";
+                        $qu = "SELECT * FROM doctor WHERE status='success'";
                         $res = mysqli_query($con,$qu);
                         while($row=mysqli_fetch_assoc($res)){
                       ?>
-                      <option value="<?php echo $row['specialist'];?>" name='specialist'><?php echo $row['specialist']; ?></option>
+                      <option value="Dr. <?php echo $row['name'];?> (<?php echo $row['specialist'];?>)"><?php echo $row['name'];?> (<?php echo $row['specialist'];?>)</option>
                       <?php }?>
                     </select>
                   </div>
-            </div>
-          <!-- /Doctor type -->
-            <!-- Doctor -->
-            <div class="md-form">
-              <!-- <i class="far fa-clock prefix grey-text"></i> -->
-              <div class="container">
-                <select class="browser-default custom-select form-control" name="docho2" id="doclist2" required>
-                  <option selected>Select Doctor</option>
-                  <!-- <option value="Dentist">Dentist</option>
-                  <option value="Cardiologist">Cardiologist</option>
-                  <option value="General Physician">General Physician</option> -->
-                </select>
-              </div>              
             </div>
           <!-- /Doctor -->                      
             <div class="text-center py-4 mt-3">
@@ -171,19 +161,21 @@ if(!isset($_SESSION['useremail'])){
   <!-- /Footer -->
 
   <script src="../../assets/js/main.js"></script>
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="../../assets/js/jquery.datetimepicker.full.js"></script>
+
   <!-- Materialize JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <!-- JQuery -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
   <!-- Bootstrap tooltips -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
   <!-- Bootstrap core JavaScript -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.5/js/mdb.min.js"></script> 
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="../../assets/js/jquery.datetimepicker.full.js"></script>
+
   
   <!-- <script>
     var temp = document.getElementById('doc').value;
@@ -248,6 +240,17 @@ if(!isset($_SESSION['useremail'])){
 				'14:00','14:15','14:30','14:45','15:00','15:15','15:30','15:45','16:00','16:15','16:30','16:45','17:00','17:15','17:30','17:45','18:00'],
 	step:5
 });
+
+
+$( function() {
+    $("#datepicker").datepicker();
+  } );
+  
+
+
+
+
+
   </script>
 </body>
 </html>
