@@ -85,8 +85,8 @@ if(!isset($_SESSION['useremail'])){
     <?php
 		include('../../includes/conn.php');
 
-		$q1 = "SELECT * FROM appointments where a_date>CURRENT_DATE AND a_time>CURRENT_TIME AND status='pending' ";
-		$r = mysqli_query($con,$q1);
+    $q1 = "SELECT * FROM appointments where a_date>CURRENT_DATE AND status='pending' ";
+    $r = mysqli_query($con,$q1);
 		while($row = mysqli_fetch_assoc($r)){
 			$aid = $row['id'];
 			$pid = $row['pat_id'];
@@ -96,7 +96,7 @@ if(!isset($_SESSION['useremail'])){
 			$apt = $row['a_time'];
 			$s = $row['status'];
 			$tid = $row['tid'];
-			$rpath = $row['pre_reprt'];
+      $rpath = $row['pre_reprt'];
 
 		   $dt = date("d-M-Y", strtotime($ad));
 		   $tt  = date("h:i A", strtotime($apt));
