@@ -94,7 +94,7 @@ if(@$type == "doc") {
     <?php
 		include('../../includes/conn.php');
 
-		$q1 = "SELECT * FROM appointments where a_date<=CURRENT_DATE AND a_time<CURRENT_TIME AND status='pending' ";
+		$q1 = "SELECT * FROM appointments where a_date<CURRENT_DATE AND status='pending' ";
 		$r = mysqli_query($con,$q1);
 		while($row = mysqli_fetch_assoc($r)){
 			$aid = $row['id'];

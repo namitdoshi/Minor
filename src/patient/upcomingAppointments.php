@@ -98,18 +98,16 @@ if(!isset($_SESSION['useremail'])){
 			$tid = $row['tid'];
       $rpath = $row['pre_reprt'];
 
-		   $dt = date("d-M-Y", strtotime($ad));
-		   $tt  = date("h:i A", strtotime($apt));
-
+		  $dt = date("d-M-Y", strtotime($ad));
+		  $tt  = date("h:i A", strtotime($apt));
 			$q2 = "SELECT name,phone_number,address FROM doctor where did='$docid' ";
 			$r1 = mysqli_query($con,$q2);
 			while($rw = mysqli_fetch_assoc($r1)){
 				$docname = $rw['name'];
 				$docadd = $rw['address'];
-				$ph = $rw['phone_number'];
-
-
-
+        $ph = $rw['phone_number'];
+        // echo $id;
+        // echo $pid;
 
 			if($id == $pid ){
 			if($tid == ""){

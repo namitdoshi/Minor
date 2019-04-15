@@ -97,7 +97,7 @@ if(@$type == "doc") {
     // echo 'nam2';
 		while($rows = mysqli_fetch_assoc($rrr)){
       $ttid = $rows['tid'];
-      echo $ttid;
+      // echo $ttid;
 		}
     if(@$ttid !=""){?>
     <!-- <th width="15%" style="font-size:13px;text-align:center; color:white; background:#E90303;">Trans. ID</th> -->
@@ -129,9 +129,9 @@ if(@$type == "doc") {
       // echo $docid;
       if($id == $docid ){
         // echo 'nam'; 
-        echo $tid;
+        // echo $tid;
         if($tid == ""){
-          echo "<div class='alert alert-info'><b>No Upcoming Appointments are Pending</b></div>";
+          // echo "<div class='alert alert-info'><b>No Upcoming Appointments are Pending</b></div>";
         }
     else{
         // echo 'nam43';

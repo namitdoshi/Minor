@@ -112,11 +112,11 @@ if(!isset($_SESSION['useremail'])){
 
 
 
-			if($id == $pid ){
-			if($tid == ""){
-				echo "<div class='alert alert-info'><span class='glyphicon glyphicon-info-sign'></span> No Appointments To Show</div>";
-			}else{
-			?>
+			if($id == $pid ) {
+			  if($tid == "") {
+				  echo "<div class='alert alert-info'><span class='glyphicon glyphicon-info-sign'></span> No Appointments To Show</div>";
+			  } else{
+			  ?>
 
       <div class="" style="padding-bottom:20px;">
         <!-- Card -->
