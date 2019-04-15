@@ -85,33 +85,35 @@ if(!isset($_SESSION['useremail'])){
     <!-- Card body -->
       <div class="card-body">
         <!-- form register -->
-        <form>
+        <form action='appointment.php' method=POST ENCTYPE="multipart/form-data">
             <p class="h4 text-center py-4">Book Appointment</p>
             <div class="md-form">
               <input type="hidden" name="pid" value="<?php echo $id;?>"/><br>
             </div>
+            <!-- Patient ID -->
+            <input type="hidden" name="pid" value="<?php echo $id;?>"/><br>
             <!-- input name -->
             <div class="md-form">
                 <i class="fa fa-user prefix grey-text"></i>
-                <input type="text" id="patientName" name="name" class="form-control" value="<?php echo $newname;?>" onkeyup="letters1(this)" required>
+                <input type="text" id="patientName" name="name" class="form-control" value="<?php echo $newname;?>" onkeyup="letters1(this)" disabled required>
                 <label for="patientName" class="font-weight-light">Patient Name</label>
             </div>
             <!-- input number -->
             <div class="md-form">
                 <i class="fas fa-phone prefix grey-text"></i>
-                <input type="number" id="phoneNumber" name="phone" class="form-control" value="<?php echo $ph;?>" required>
+                <input type="number" id="phoneNumber" name="phone" class="form-control" value="<?php echo $ph;?>" disabled required>
                 <label for="phoneNumber" class="font-weight-light">Phone number</label>
             </div>
             <!-- input age -->
             <div class="md-form">
                 <i class="fas fa-baby prefix grey-text"></i>
-                <input type="number" id="age" class="form-control" name="age" value="<?php echo $age;?>" required>
+                <input type="number" id="age" class="form-control" name="age" value="<?php echo $age;?>" disabled required>
                 <label for="age" class="font-weight-light">Patient Age</label>
             </div>
             <!-- input date -->
             <div class="md-form">
               <i class="fas fa-calendar-day prefix grey-text"></i>
-              <input type="text" class="form-control" name="date" id="datepicker" require>
+              <input type="text" class="form-control" name="date" id="datepicker" required>
               <label class="font-weight-light" for="datepicker">Appointment Date</label>
             </div>
             <!-- Time -->
@@ -133,14 +135,14 @@ if(!isset($_SESSION['useremail'])){
                         $res = mysqli_query($con,$qu);
                         while($row=mysqli_fetch_assoc($res)){
                       ?>
-                      <option value="Dr. <?php echo $row['name'];?> (<?php echo $row['specialist'];?>)"><?php echo $row['name'];?> (<?php echo $row['specialist'];?>)</option>
+                      <option value="<?php echo $row['name'];?> (<?php echo $row['specialist'];?>)"><?php echo $row['name'];?> (<?php echo $row['specialist'];?>)</option>
                       <?php }?>
                     </select>
                   </div>
             </div>
           <!-- /Doctor -->                      
             <div class="text-center py-4 mt-3">
-                <button class="btn btn-indigo" type="submit">Register</button>
+                <button class="btn btn-indigo" type="submit" name="sub_app">Register</button>
             </div>
         </form>
         <!-- Material form register -->
@@ -165,7 +167,7 @@ if(!isset($_SESSION['useremail'])){
   <!-- Materialize JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <!-- JQuery -->
-  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- Bootstrap tooltips -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
   <!-- Bootstrap core JavaScript -->
